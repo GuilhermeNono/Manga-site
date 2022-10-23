@@ -14,6 +14,22 @@ export const Container = styled.div`
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  
+  animation-name: fade-out;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  transition: all ease 3s;
+
+@keyframes fade-out {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
 `;
 
 export const FloatCard = styled.div`
@@ -28,8 +44,8 @@ export const LeftLine = styled.span`
   height: 2px;
   background: linear-gradient(
     to right,
-    rgba(33, 33, 33, 1),
-    rgba(33, 33, 33, 0.1)
+    rgba(68, 138, 255, 1),
+    rgba(0, 0, 0, 0.1)
   );
   margin-left: 45px;
 `;
@@ -39,8 +55,8 @@ export const RightLine = styled.span`
   height: 2px;
   background: linear-gradient(
     to left,
-    rgba(33, 33, 33, 1),
-    rgba(33, 33, 33, 0.1)
+    rgba(68, 138, 255, 1),
+    rgba(0, 0, 0, 0.1)
   );
   margin-right: 45px;
 `;
@@ -55,11 +71,14 @@ export const Card = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #454545;
+  background-color: white;
   height: 100px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 `;
 
 export const CardText = styled.span`
   font-size: 48px;
+  color: black;
+
 `;

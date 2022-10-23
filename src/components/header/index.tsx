@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTop } from '../../services/MangaTop';
 import SearchBar from '../searchBar';
 
 import { Container, Logo, Profile, Name, ProfilePicture, EmptySpace } from './styles';
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
         <SearchBar />
 
         <Profile>
-            <Name>Pf Name</Name>
+            <Name>Entrar</Name>
             <ProfilePicture></ProfilePicture>
         </Profile>
     </Container>

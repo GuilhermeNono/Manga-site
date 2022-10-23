@@ -1,33 +1,45 @@
-import React from 'react';
-import BannerCarousel from '../bannerCarousel';
-import Catalogue from '../catalogue';
-import Header from '../header';
+import React from "react";
+import BannerCarousel from "../bannerCarousel";
+import Catalogue from "../catalogue";
+import Header from "../header";
+import MangaProvider, { MangaContext } from "../../context/MangaContext";
 
-import { Container, FloatCard, LeftLine, RightLine, Card, CardText } from './styles';
+import {
+  Container,
+  FloatCard,
+  LeftLine,
+  RightLine,
+  Card,
+  CardText,
+} from "./styles";
+import { getTop } from "../../services/MangaTop";
+import { MangaContextType } from "../../@types/manga";
 
-const app: React.FC = () => {
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <Container>
-        <Header />
+    <MangaProvider>
+      <div className="App">
+        <Container>
+          <Header />
 
-        <BannerCarousel />
+          <BannerCarousel />
 
-        <FloatCard>
-          <LeftLine></LeftLine>
-          <Card>
-            <CardText>Lorem Impsum</CardText>
-          </Card>
-          <RightLine></RightLine>
-        </FloatCard>
+          <FloatCard>
+            <LeftLine></LeftLine>
+            <Card>
+              <CardText>Populares da Semana</CardText>
+            </Card>
+            <RightLine></RightLine>
+          </FloatCard>
 
-        <Catalogue />
+          <Catalogue />
 
-        {/* <Footer />         */}
-
-      </Container>
-    </div>
+          {/* <Footer />         */}
+        </Container>
+      </div>
+    </MangaProvider>
   );
-}
+};
 
-export default app;
+export default App;

@@ -1,12 +1,14 @@
 import React from "react";
 
-import { Container, Pages, Page, EmptySpace } from "./styles";
+import { Container, Pages, Page, Previous, Carousel, Next} from "./styles";
 
 const BannerCarousel: React.FC = () => {
   return (
     <Container>
-        <EmptySpace></EmptySpace>
-      Banner Show
+        <Previous></Previous>
+        <Carousel src="img/onepiece-banner.jpg"></Carousel>
+        <Next></Next>
+
       <Page>
         <Pages isOn></Pages>
         <Pages></Pages>
