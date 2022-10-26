@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { findAnime } from '../../services/MangaSearch';
+import { findAnime } from '../../../../services/MangaSearch';
 
 import { Container, SearchField, Lupe} from './styles';
 

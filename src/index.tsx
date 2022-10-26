@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app';
+import App from './app';
 import MangaProvider from './context/MangaContext';
 import GlobalStyles from './styles/GlobalStyles';
 

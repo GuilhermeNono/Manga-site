@@ -1,6 +1,6 @@
 import * as React from "react";
-import { IManga, MangaContextType } from "../@types/manga";
-import LoadingPage from "../components/loadingPage";
+import { MangaContextType } from "../@types/manga";
+import LoadingPage from "../pages/Loading";
 import { getTop } from "../services/MangaTop";
 
 interface Props {

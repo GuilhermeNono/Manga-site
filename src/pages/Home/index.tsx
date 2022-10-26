@@ -1,8 +1,7 @@
 import React from "react";
-import BannerCarousel from "../bannerCarousel";
-import Catalogue from "../catalogue";
-import Header from "../header";
-import MangaProvider, { MangaContext } from "../../context/MangaContext";
+import BannerCarousel from "../../components/Home/bannerCarousel";
+import Catalogue from "../../components/Home/catalogue";
+import Header from "../../components/layout/Header/header";
 
 import {
   Container,
@@ -12,13 +11,9 @@ import {
   Card,
   CardText,
 } from "./styles";
-import { getTop } from "../../services/MangaTop";
-import { MangaContextType } from "../../@types/manga";
 
-const App: React.FC = () => {
-
+const Home: React.FC = () => {
   return (
-    <MangaProvider>
       <div className="App">
         <Container>
           <Header />
@@ -38,8 +33,7 @@ const App: React.FC = () => {
           {/* <Footer />         */}
         </Container>
       </div>
-    </MangaProvider>
   );
-};
+}
 
-export default App;
+export default Home;

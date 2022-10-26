@@ -1,15 +1,14 @@
 import React from 'react';
 import Card from '../Card';
 
-import { MangaContext } from '../../context/MangaContext';
-import { MangaContextType } from '../../@types/manga';
+import { MangaContext } from '../../../context/MangaContext';
+import { MangaContextType } from '../../../@types/manga';
 import { Container, Previous, Cards, Next } from './styles';
-import { getTop } from '../../services/MangaTop';
+import { getTop } from '../../../services/MangaTop';
 
 const Catalogue: React.FC = () => {
   
   const {mangas} = React.useContext(MangaContext) as MangaContextType
-  
   return (
     <Container>
 
@@ -17,7 +16,7 @@ const Catalogue: React.FC = () => {
 
         <Cards>
             {mangas.current.map((test:any, k:any) => {
-              return <Card image={test.image} key={k}/>
+              return <Card image={test.image} id={test.id} key={k}/>
             })}
         </Cards>
 
